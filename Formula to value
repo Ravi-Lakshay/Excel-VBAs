@@ -1,1 +1,18 @@
 https://www.spreadsheetweb.com/excel-convert-formula-to-value/
+
+
+Sub ConvertFormulasToValuesInSelection()
+
+    Dim rng As Range
+
+    For Each rng In Selection
+
+        If rng.HasFormula Then
+
+            rng.Formula = rng.Value
+
+        End If
+
+    Next rng
+
+End Sub
