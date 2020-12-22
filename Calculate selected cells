@@ -1,0 +1,7 @@
+https://www.extendoffice.com/documents/excel/3931-excel-only-recalculate-refresh-selected-cells.html
+
+## VBA code: Only recalculate selected cells in Excel:
+
+Public Sub RecalculateSelection()
+    If TypeName(Selection) = "Range" Then Selection.Calculate
+End Sub
