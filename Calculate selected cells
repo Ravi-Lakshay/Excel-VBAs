@@ -4,4 +4,10 @@ https://www.extendoffice.com/documents/excel/3931-excel-only-recalculate-refresh
 
 Public Sub RecalculateSelection()
     If TypeName(Selection) = "Range" Then Selection.Calculate
+    
+    Dim I
+For I = 1 To 3 ' Loop 3 times.
+ Beep ' Sound a tone.
+Next I
+
 End Sub
