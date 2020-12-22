@@ -1,1 +1,23 @@
 delete hidden rows or coulmns: https://trumpexcel.com/delete-hidden-rows-columns-in-excel/
+
+Sub ConvertFormulasToValuesInActiveWorksheet()
+
+    Dim rng As Range
+
+    For Each rng In ActiveSheet.UsedRange
+
+        If rng.HasFormula Then
+
+            rng.Formula = rng.Value
+
+        End If
+
+    Next rng
+
+Dim I
+For I = 1 To 3 ' Loop 3 times.
+ Beep ' Sound a tone.
+Next I
+
+
+End Sub
